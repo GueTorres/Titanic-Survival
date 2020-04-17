@@ -1,0 +1,148 @@
+# plt.title("Embarked")
+# plt.plot(titanic['Embarked'], titanic['Survived'], 'b.')
+# plt.xlabel("Embarked")
+# plt.ylabel("Survived")
+# plt.show()
+
+# plt.title("Fare")
+# plt.plot(titanic['Fare'], titanic['Survived'], 'b.')
+# plt.xlabel("Fare")
+# plt.ylabel("Survived")
+# plt.show()
+
+# plt.title("Name")
+# plt.plot(titanic['Name'], titanic['Survived'], 'b.')
+# plt.xlabel("Name")
+# plt.ylabel("Survived")
+# plt.show()
+
+# plt.title("Parch")
+# plt.plot(titanic['Parch'], titanic['Survived'], 'b.')
+# plt.xlabel("Parch")
+# plt.ylabel("Survived")
+# plt.show()
+
+# plt.title("PassengerId")
+# plt.plot(titanic['PassengerId'], titanic['Survived'], 'b.')
+# plt.xlabel("PassengerId")
+# plt.ylabel("Survived")
+# plt.show()
+
+# plt.title("Pclass")
+# plt.plot(titanic['Pclass'], titanic['Survived'], 'b.')
+# plt.xlabel("Pclass")
+# plt.ylabel("Survived")
+# plt.show()
+
+# plt.title("Sex")
+# plt.plot(titanic['Sex'], titanic['Survived'], 'b.')
+# plt.xlabel("Sex")
+# plt.ylabel("Survived")
+# plt.show()
+
+# plt.title("SibSp")
+# plt.plot(titanic['SibSp'], titanic['Survived'], 'b.')
+# plt.xlabel("SibSp")
+# plt.ylabel("Survived")
+# plt.show()
+
+# plt.title("Ticket")
+# plt.plot(titanic['Ticket'], titanic['Survived'], 'b.')
+# plt.xlabel("Ticket")
+# plt.ylabel("Survived")
+# plt.show()
+
+# age = titanic(data['Age'])
+# cabin = titanic(data['Cabin'])
+# embarked = titanic(data['Embarked'])
+# fare = titanic(data['Fare'])
+# name = titanic(data['Name'])
+# parch = titanic(data['Pclass'])
+# passengerid = titanic(data['PassengerId'])
+# pclass = titanic(data['Pclass'])
+# sex = titanic(data['Sex'])
+# sibsp = titanic(data['SibSp'])
+# ticket = titanic(data['Ticket'])
+# survived = titanic(data['Survived'])
+
+
+
+
+# #Use sklearn
+# from sklearn.preprocessing import PolynomialFeatures
+# poly_features = PolynomialFeatures(degree=2, include_bias=False)
+# poly_features.fit(titanic)
+# titanic_poly = poly_features.transform(titanic)
+# # print(X_poly)
+# model_titanic = LinearRegression()
+# model_titanic.fit(titanic_poly, y)
+# print(model_pr.coef_, model_pr.intercept_)
+
+
+titanic_m_adult = (titanic['Age'] == range[40, 60])
+m_adult = titanic[titanic_m_adult]
+
+titanic_s_adult = (titanic['Age'] == range[60, 80])
+s_adult = titanic[titanic_s_adult]
+
+titanic_senior = titanic['Age'] > 80
+senior = titanic[titanic_senior]
+
+#Which variables have strong relationship to passengers’ survival?
+#Use correlation coefficients and scatter plots to decide
+titanic_age = titanic.drop(['Pclass', 'SibSp', 'Embarked', 'Sex', 'Ticket', 'PassengerId', 'Parch', 'Name', 'Fare'], axis=1, inplace=True)
+
+#titanic_child = titanic['Age'] <= 20
+child = titanic[titanic['Age'] <= 20]
+#titanic.drop(['Pclass', 'SibSp', 'Embarked', 'Sex', 'Ticket', 'PassengerId', 'Parch', 'Name', 'Fare'], axis=1, inplace=True)
+
+
+
+
+child.describe()
+# child.describe()
+# #titanic.head()
+
+# plt.title("Age")
+# plt.bar(titanic['Age'], titanic['==='], 'b.')
+# plt.xlabel("Age")
+# plt.ylabel("Numbers")
+
+# plt.show()
+
+# the number of survivals within age
+# make age ranges
+# plt.bar(yes,)
+
+titanic_y_adult = (titanic['Age'] > 20, titanic['Age'] <= 40)
+y_adult = titanic[titanic_y_adult]
+
+y_adult.describe()
+
+X_train_data = pd.DataFrame({'Age':[0,2,4,13,35,-1,54]})
+
+bins= [0,2,4,13,20,110]
+labels = ['Infant','Toddler','Kid','Teen','Adult']
+X_train_data['AgeGroup'] = pd.cut(X_train_data['Age'], bins=bins, labels=labels, right=False)
+print (X_train_data)
+
+# from sklearn.linear_model import LinearRegression
+# model_train = LinearRegression()
+# model_train.fit(train_train[['Fare', 
+#                              'Parch',
+#                              'Pclass',
+#                              'Sex',
+#                              'SibSp',
+#                              'Embark_C',
+#                              'Embark_Q',
+#                              'Embark_S']], train_train[['Survived']])
+
+
+['Fare', 
+                               'Parch',
+                               'Pclass',
+                               'Sex',
+                               'SibSp',
+                               'Embark_C',
+                               'Embark_Q',
+                               'Embark_S']
